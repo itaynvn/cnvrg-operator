@@ -13,7 +13,7 @@ metadata:
   name: {{ .Spec.Logging.Elastalert.SvcName }}
   namespace: {{ ns . }}
 spec:
-  replicas: 1
+  replicas: {{ .Spec.Logging.Elastalert.Replicas }}
   selector:
     matchLabels:
       app: {{ .Spec.Logging.Elastalert.SvcName }}

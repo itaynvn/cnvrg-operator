@@ -2,6 +2,7 @@
 logging:
   elastalert:
     enabled: {{ .Values.logging.elastalert.enabled }}
+    replicas: "{{ .Values.logging.elastalert.replicas }}"
     storageSize: {{ .Values.logging.elastalert.storageSize }}
     storageClass: "{{ .Values.logging.elastalert.storageClass }}"
     {{- if .Values.logging.elastalert.nodeSelector }}

@@ -19,6 +19,7 @@ type Fluentbit struct {
 type Elastalert struct {
 	Enabled        bool              `json:"enabled,omitempty"`
 	Image          string            `json:"image,omitempty"`
+	Replicas       int               `json:"replicas,omitempty"`
 	AuthProxyImage string            `json:"authProxyImage,omitempty"`
 	CredsRef       string            `json:"credsRef,omitempty"`
 	Port           int               `json:"port,omitempty"`
@@ -76,6 +77,7 @@ var cnvrgAppLoggingDefault = CnvrgAppLogging{
 	Elastalert: Elastalert{
 		Enabled:        false,
 		Image:          "elastalert:3.0.0-beta.1",
+		Replicas:       1,
 		CredsRef:       "elastalert-creds",
 		AuthProxyImage: "nginx:1.20",
 		Port:           80,
