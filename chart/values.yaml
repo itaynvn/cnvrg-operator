@@ -131,6 +131,7 @@ logging:
     enabled: true
   elastalert:
     enabled: true
+    replicas: 1
     storageSize: "30Gi"
     storageClass: ""
     nodeSelector: { }

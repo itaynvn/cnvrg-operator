@@ -857,6 +857,8 @@ spec:
                         type: integer
                       pvcName:
                         type: string
+                      replicas:
+                        type: integer
                       requests:
                         properties:
                           cpu:
